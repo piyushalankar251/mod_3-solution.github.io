@@ -1,0 +1,110 @@
+*{
+    list-style:none;
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0%;
+    padding: 0%;
+    overflow:auto;
+    scroll-behavior: smooth;
+}
+header{
+    position: sticky;
+    display:flex;
+    align-items: center;
+    height:fit-content;
+    width:100%;
+    padding: 25px;
+    overflow: hidden;
+    background-color:blueviolet;
+
+}
+
+#logo{
+    color: whitesmoke;
+    overflow: hidden;
+}
+#logo img{
+    display:block;
+    height: 100%;
+    width:100%;
+    border-radius: 50px;
+    align-self: center;
+}
+#headding{
+color: blueviolet;
+font-weight: bolder;
+font-size: xx-large;
+margin: 2% auto;
+}
+.container{
+    display: grid;
+    grid-template-columns:repeat(3,20vw) ;
+    grid-gap:2rem;
+}
+.item{
+    padding: 6px;
+    width: fit-content;
+    height: 100%;
+    border: 5px solid green;
+}
+center h1{
+    color: rgb(238, 96, 71);
+    overflow: hidden;
+    font-weight: bold;
+}
+
+
+/*Properties for small devices like smartphones*/
+@media (min-width:240px) and (max-width:767px) {
+    header {
+        display: grid;
+        grid-template-columns:repeat(2,45vw );
+        grid-gap: 2rem;
+        padding: 10px;
+    }
+    #logo{
+        font-size: medium;
+    }
+    #navigation
+    {
+        display: block;
+        padding:0;
+        width: min-content;
+        font-size: large;
+        background-color: blueviolet;
+        color: white;
+    }
+    .container{
+        display: grid;
+        grid-template-columns:repeat(1,90vw) ;
+        grid-gap:1rem;
+        height: max-content;
+    }
+    .item{
+        width: 100%;
+    }
+}
+
+/*Properties for medium devices like tablets*/
+@media (min-width: 768px) and (max-width:1000px) {
+    #navigation{
+        display: none;
+    }
+    .container{
+        display: grid;
+        grid-template-columns:repeat(2,45vw) ;
+        grid-gap:1rem;
+    }
+    .item{
+        width: 100%;
+    }
+    #special{
+        width: 92vw;
+    }
+}
+/*Property for large devices like laptops and desktop PCs*/
+@media (min-width:1001px){
+    #navigation{
+        display: none;
+    }
+}
